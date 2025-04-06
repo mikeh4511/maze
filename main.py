@@ -9,18 +9,16 @@ def main():
     win = Window(800, 600)
     win.show()
 
-    p1 = Point(100, 100)
-    p2 = Point(200, 200)
-    p3 = Point(300, 100)
-    p4 = Point(400, 300)
+    x1, y1 = 100, 100
+    x2, y2 = 200, 200
 
-    line1 = Line(p1, p2)
-    line2 = Line(p3, p4)
-    line3 = Line(p1, p4)
+    cell1 = Cell(x1, y1, x2, y2, win)
+    cell2 = Cell(250, 100, 350, 200, win)
 
-    win.draw_line(line1, "red")
-    win.draw_line(line2, "blue")
-    win.draw_line(line3, "black")
+    cell2.has_left_wall = False
+    cell2.draw()
+
+    cell1.draw()
 
     sys.exit(app.exec_())
 
