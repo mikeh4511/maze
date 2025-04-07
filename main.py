@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QApplication
 import sys
+import time
 
 from classes import *
 
@@ -12,13 +13,14 @@ def main():
     x1, y1 = 100, 100
     x2, y2 = 200, 200
 
-    cell1 = Cell(x1, y1, x2, y2, win)
-    cell2 = Cell(250, 100, 350, 200, win)
+    maze = Maze(x1, y1, 20, 20, 20, 20, win)
 
-    cell2.has_left_wall = False
-    cell2.draw()
 
-    cell1.draw()
+    win.wait_for_close()
+
+
+
+
 
     sys.exit(app.exec_())
 
